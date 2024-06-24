@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func increaseTapped(_ sender: Any) {
+    @IBAction private func increaseTapped(_ sender: Any) {
         count += 1
         let currentDate = dateFormatter.string(from: Date())
         counterLabel.text = "Значение счетчика: \(count)"
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func decreaseTapped(_ sender: Any) {
+    @IBAction private func decreaseTapped(_ sender: Any) {
         let currentDate = dateFormatter.string(from: Date()) //конвертируем текущее дату и время в строку
 
         if count > 0{
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func resetTapped(_ sender: Any) {
+    @IBAction private func resetTapped(_ sender: Any) {
         let currentDate = dateFormatter.string(from: Date())
         count = 0
         counterLabel.text = "Значение счетчика: \(count)"
